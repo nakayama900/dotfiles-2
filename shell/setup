@@ -30,7 +30,7 @@ if [ ! -d ~/dotfiles ]
 	else
 		echo "dotfiles already cloned."
 fi
-
+cd dotfiles && git switch develop && cd ../ 
 # Install some software
 echo "Installing some software & library..."
 brew bundle -v --file=./dotfiles/Brewfile
@@ -58,8 +58,8 @@ sh ~/dotfiles/shell/alfred
 echo "Zpreztoの設定を読み込む"
 sh ~/dotfiles/shell/zprezto
 
-echo "zshの設定を読み込む"
-source ~/.zshrc
+# echo "zshの設定を読み込む"
+# source ~/.zshrc
 
 # echo "Carelyのセットアップ"
 # sh ~/dotfiles/shell/carely
